@@ -2,38 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Profile - Tasks for Today</title>
+    <title>User Profile</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; color: #333; }
-        .container { max-width: 800px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav { margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #eee; }
-        nav a { margin-right: 15px; text-decoration: none; color: #007bff; font-weight: bold; }
-        nav a:hover { text-decoration: underline; }
-        .card { background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 6px; }
-        .card p { margin: 8px 0; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f8f9fa; }
+        header { background-color: #007bff; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: #fff; text-decoration: none; margin-left: 1.5rem; }
+        .container { max-width: 600px; margin: 3rem auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h2 { margin-bottom: 1rem; color: #007bff; }
+        p { margin-bottom: 0.5rem; font-size: 1.1rem; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Tasks for Today Management System</h2>
+    <header>
+        <h1>Tasks for Today</h1>
         <nav>
-            <a href="/">Today's Tasks</a>
-            <a href="/tasks">All Tasks</a>
-            <a href="/profile">Profile</a>
-            <a href="/about">About Developer</a>
+            <a href="/">Home</a>
+            <a href="/tasks">Today's Tasks</a>
+            <a href="/about">About</a>
         </nav>
-
-        <h3>Demo User Profile</h3>
-        <?php if (!empty($user)): ?>
-            <div class="card">
-                <p><strong>Username:</strong> <?= esc($user['username']) ?></p>
-                <p><strong>Full Name:</strong> <?= esc($user['full_name']) ?></p>
-                <p><strong>Email:</strong> <?= esc($user['email']) ?></p>
-                <p><strong>Created At:</strong> <?= esc($user['created_at']) ?></p>
-            </div>
-        <?php else: ?>
-            <p>No user record found.</p>
-        <?php endif; ?>
+    </header>
+    <div class="container">
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> Tyrone</p>
+        <p><strong>Full Name:</strong> Tyrone Hernandez</p>
+        <p><strong>Email:</strong> tyronehernandez@gmail.com</p>
     </div>
 </body>
 </html>
